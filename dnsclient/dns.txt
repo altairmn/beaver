@@ -1,0 +1,9 @@
+An authoritative name server provides actual answer to your DNS queries such as – mail server IP address or web site IP address (A resource record). It provides original and definitive answers to DNS queries. It does not provides just cached answers that were obtained from another name server. Therefore it only returns answers to queries about domain names that are installed in its configuration system. There are two types of Authoritative Name Servers:
+
+    Master server (primary name server) – A master server stores the original master copies of all zone records. A hostmaster only make changes to master server zone records. Each slave server gets updates via special automatic updating mechanism of the DNS protocol. All slave servers maintain an identical copy of the master records.
+    Slave server (secondary name server) – A slave server is exact replica of master server. It is used to share DNS server load and to improve DNS zone availability in case master server fails. It is recommend that you should at least have 2 slave servers and one master server for each domain name.
+
+How Do I View Authoritative Name Server Names and IP Address?
+
+The multiple name servers make sure that the domain still functional even if one name server becomes inaccessible or inoperable due to security or overloading issues. On the internet each domain name assigned a set of authoritative name servers. You can find out authoritative name servers by typing the following command at shell prompt (works with UNIX / Linux and Mac OS X):
+
